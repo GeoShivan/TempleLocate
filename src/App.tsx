@@ -25,7 +25,7 @@ export default function App() {
   const [mapCenter, setMapCenter] = useState<[number, number] | null>(null);
 
   useEffect(() => {
-    fetch('/data/temples.geojson')
+    fetch(`${import.meta.env.BASE_URL}data/temples.geojson`)
       .then(res => res.json())
       .then((data: TempleFeatureCollection) => {
         setTemples(data.features);
