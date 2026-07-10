@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { TempleFeature } from '../types';
-import { Search, X, Filter } from 'lucide-react';
+import { Search, X, Filter, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface SidebarProps {
   temples: TempleFeature[];
@@ -13,6 +13,8 @@ interface SidebarProps {
   setSelectedLocality: (l: string) => void;
   onSelectResult: (temple: TempleFeature | null) => void;
   filteredCount: number;
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
 }
 
 export default function Sidebar({
@@ -25,12 +27,12 @@ export default function Sidebar({
   selectedLocality,
   setSelectedLocality,
   onSelectResult,
-  filteredCount
+  filteredCount,
+  isOpen,
+  setIsOpen
 }: SidebarProps) {
-  
-  const districts = useMemo(() => Array.from(new Set(temples.map(t => t.properties.District))).sort(), [temples]);
-  
-  const localities = useMemo(() => {
+    const districts = useMemo(() => Array.from(new Set(temples.map(t => t.properties.District))).sort(), [temples]);
+    const localities = useMemo(() => {
     let filtered = temples;
     if (selectedDistrict) filtered = filtered.filter(t => t.properties.District === selectedDistrict);
     return Array.from(new Set(filtered.map(t => t.properties.Locality))).sort();
@@ -48,19 +50,28 @@ export default function Sidebar({
       {/* Mobile Toggle Button */}
       <button 
         className="md:hidden absolute bottom-4 left-4 z-50 bg-orange-600 text-white p-3 rounded-full shadow-lg shadow-orange-200"
-        onClick={() => {
-          const sidebar = document.getElementById('sidebar');
-          if (sidebar) sidebar.classList.toggle('-translate-x-full');
-        }}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <Filter className="w-5 h-5" />
       </button>
 
+      {/* Desktop Toggle Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="hidden md:flex absolute top-4 z-50 bg-white border border-slate-200 shadow-md rounded-full p-2 hover:bg-slate-50 transition-all duration-300"
+        style={{ left: isOpen ? '20rem' : '1rem', transform: isOpen ? 'translateX(-50%)' : 'none' }}
+        title={isOpen ? "Collapse Sidebar" : "Expand Sidebar"}
+      >
+        {isOpen ? <ChevronLeft className="w-5 h-5 text-slate-600" /> : <ChevronRight className="w-5 h-5 text-slate-600" />}
+      </button>
+
       <div 
         id="sidebar"
-        className="absolute md:relative z-40 w-80 h-full bg-white border-r border-slate-200 shadow-lg flex flex-col transition-transform duration-300 -translate-x-full md:translate-x-0"
+        className={`absolute md:relative z-40 h-full bg-white border-r border-slate-200 shadow-lg flex flex-col transition-all duration-300 ${
+          isOpen ? 'translate-x-0 w-80' : '-translate-x-full md:-translate-x-full w-80 md:w-0 overflow-hidden'
+        }`}
       >
-        <div className="p-6 border-b border-slate-200 bg-white flex justify-between items-center shrink-0">
+        <div className="p-6 border-b border-slate-200 bg-white flex justify-between items-center shrink-0 w-80">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-200 shrink-0">
               <span className="text-white text-xl">🛕</span>
@@ -72,16 +83,13 @@ export default function Sidebar({
           </div>
           <button 
             className="md:hidden text-slate-400 hover:text-slate-600"
-            onClick={() => {
-              const sidebar = document.getElementById('sidebar');
-              if (sidebar) sidebar.classList.add('-translate-x-full');
-            }}
+            onClick={() => setIsOpen(false)}
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-      <div className="flex-1 overflow-y-auto p-4 space-y-6">
+      <div className="flex-1 overflow-y-auto p-4 space-y-6 w-80">
         {/* Search */}
         <div className="relative">
           <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />

@@ -23,6 +23,7 @@ export default function App() {
   const [baseMap, setBaseMap] = useState<BaseMapType>('google');
   const [selectedTemple, setSelectedTemple] = useState<TempleFeature | null>(null);
   const [mapCenter, setMapCenter] = useState<[number, number] | null>(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/temples.geojson`)
@@ -62,6 +63,9 @@ export default function App() {
     setSelectedTemple(temple);
     if (temple) {
       setMapCenter(temple.geometry.coordinates);
+      if (window.innerWidth < 768) {
+        setIsSidebarOpen(false);
+      }
     }
   }, []);
 
@@ -79,6 +83,8 @@ export default function App() {
         setSelectedLocality={setSelectedLocality}
         onSelectResult={handleSelectTemple}
         filteredCount={filteredTemples.length}
+        isOpen={isSidebarOpen}
+        setIsOpen={setIsSidebarOpen}
       />
       
       {/* Main Map Area */}
