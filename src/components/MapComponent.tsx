@@ -32,26 +32,6 @@ interface MapComponentProps {
 }
 
 const basemaps: Record<BaseMapType, TileLayer<any>> = {
-  osm: new TileLayer({ source: new OSM() }),
-  esri: new TileLayer({
-    source: new XYZ({
-      url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-      maxZoom: 19
-    })
-  }),
-  carto: new TileLayer({
-    source: new XYZ({
-      url: 'https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-      attributions: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-    })
-  }),
-  topo: new TileLayer({
-    source: new XYZ({
-      url: 'https://{a-c}.tile.opentopomap.org/{z}/{x}/{y}.png',
-      maxZoom: 17,
-      attributions: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-    })
-  }),
   google: new TileLayer({
     source: new XYZ({
       url: 'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
@@ -72,7 +52,6 @@ export default function MapComponent({ temples, baseMap, setBaseMap, selectedTem
   const popupOverlay = useRef<Overlay | null>(null);
 
   const [popupData, setPopupData] = useState<TempleFeature | null>(null);
-  const [showLayerSwitcher, setShowLayerSwitcher] = useState(false);
 
   // Initialize Map
   useEffect(() => {
@@ -353,41 +332,7 @@ export default function MapComponent({ temples, baseMap, setBaseMap, selectedTem
           <Crosshair className="w-5 h-5 text-slate-700" />
         </button>
 
-        <div className="relative">
-          <button 
-            onClick={() => setShowLayerSwitcher(!showLayerSwitcher)}
-            className="bg-white p-3 rounded-lg shadow-xl border border-slate-200 hover:bg-slate-50 transition-colors"
-            title="Layers"
-          >
-            <Layers className="w-5 h-5 text-slate-700" />
-          </button>
-          
-          {showLayerSwitcher && (
-            <div className="absolute top-0 left-16 bg-white p-3 rounded-xl shadow-lg border border-slate-200 w-48 animate-in fade-in zoom-in-95 duration-200">
-              <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Base Map</h4>
-              <div className="space-y-1">
-                {[
-                  { id: 'osm', label: 'OpenStreetMap' },
-                  { id: 'carto', label: 'Carto Light' },
-                  { id: 'esri', label: 'Esri Satellite' },
-                  { id: 'topo', label: 'OpenTopoMap' },
-                  { id: 'google', label: 'Google Maps' }
-                ].map(b => (
-                  <label key={b.id} className="flex items-center gap-2 text-sm text-slate-700 cursor-pointer p-1.5 hover:bg-slate-50 rounded-md">
-                    <input 
-                      type="radio" 
-                      name="basemap" 
-                      checked={baseMap === b.id} 
-                      onChange={() => { setBaseMap(b.id as BaseMapType); setShowLayerSwitcher(false); }}
-                      className="text-orange-600 focus:ring-orange-500"
-                    />
-                    {b.label}
-                  </label>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
+
       </div>
 
       {/* Popup Overlay Container */}

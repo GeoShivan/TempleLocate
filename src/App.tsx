@@ -20,7 +20,7 @@ export default function App() {
   const [selectedLocality, setSelectedLocality] = useState('');
   
   // Map State
-  const [baseMap, setBaseMap] = useState<BaseMapType>('osm');
+  const [baseMap, setBaseMap] = useState<BaseMapType>('google');
   const [selectedTemple, setSelectedTemple] = useState<TempleFeature | null>(null);
   const [mapCenter, setMapCenter] = useState<[number, number] | null>(null);
 

@@ -21,4 +21,4 @@ export interface TempleFeatureCollection {
   features: TempleFeature[];
 }
 
-export type BaseMapType = 'osm' | 'esri' | 'carto' | 'topo' | 'google';
+export type BaseMapType = 'google';
