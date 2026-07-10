@@ -1,0 +1,395 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Meenakshi Amman Temple",
+        "District": "Madurai",
+        "Locality": "Madurai Main",
+        "Deity": "Amman"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [78.1193, 9.9195]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Brihadeeswarar Temple",
+        "District": "Thanjavur",
+        "Locality": "Thanjavur Center",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.1311, 10.7828]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Ramanathaswamy Temple",
+        "District": "Ramanathapuram",
+        "Locality": "Rameswaram",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.3174, 9.2881]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Sri Ranganathaswamy Temple",
+        "District": "Tiruchirappalli",
+        "Locality": "Srirangam",
+        "Deity": "Vishnu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [78.6872, 10.8622]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Palani Murugan Temple",
+        "District": "Dindigul",
+        "Locality": "Palani",
+        "Deity": "Murugan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [77.5186, 10.4414]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Karpaka Vinayakar Temple",
+        "District": "Sivaganga",
+        "Locality": "Pillayarpatti",
+        "Deity": "Vinayagar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [78.6500, 10.1167]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Anjaneyar Temple",
+        "District": "Chennai",
+        "Locality": "Nanganallur",
+        "Deity": "Hanuman"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.1913, 12.9772]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Kapaleeshwarar Temple",
+        "District": "Chennai",
+        "Locality": "Mylapore",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2692, 13.0336]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Thillai Nataraja Temple",
+        "District": "Cuddalore",
+        "Locality": "Chidambaram",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.6936, 11.3995]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Nellaiappar Temple",
+        "District": "Tirunelveli",
+        "Locality": "Tirunelveli Town",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [77.6934, 8.7275]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Kamatchi Amman Temple",
+        "District": "Kanchipuram",
+        "Locality": "Kanchipuram Main",
+        "Deity": "Amman"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.7036, 12.8404]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Varadharaja Perumal Temple",
+        "District": "Kanchipuram",
+        "Locality": "Kanchipuram",
+        "Deity": "Vishnu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [79.7226, 12.8193]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Parthasarathy Temple",
+        "District": "Chennai",
+        "Locality": "Triplicane",
+        "Deity": "Vishnu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2756, 13.0545]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Vadapalani Murugan Temple",
+        "District": "Chennai",
+        "Locality": "Vadapalani",
+        "Deity": "Murugan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2127, 13.0508]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Ashtalakshmi Temple",
+        "District": "Chennai",
+        "Locality": "Besant Nagar",
+        "Deity": "Amman"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2704, 12.9987]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Kalikambal Temple",
+        "District": "Chennai",
+        "Locality": "George Town",
+        "Deity": "Amman"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2864, 13.0934]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Chennakesava Perumal Temple",
+        "District": "Chennai",
+        "Locality": "George Town",
+        "Deity": "Vishnu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.281, 13.093]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Gangadeeswarar Temple",
+        "District": "Chennai",
+        "Locality": "Purasawalkam",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2543, 13.0846]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Marundeeswarar Temple",
+        "District": "Chennai",
+        "Locality": "Thiruvanmiyur",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2597, 12.9828]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Chenna Malleeswarar Temple",
+        "District": "Chennai",
+        "Locality": "George Town",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.282, 13.0938]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Madhya Kailash Temple",
+        "District": "Chennai",
+        "Locality": "Adyar",
+        "Deity": "Vinayagar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2432, 13.0062]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Ravishwarar Temple",
+        "District": "Chennai",
+        "Locality": "Royapettah",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2635, 13.0468]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Kandhakottam Murugan Temple",
+        "District": "Chennai",
+        "Locality": "Park Town",
+        "Deity": "Murugan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2784, 13.0883]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Ekambareswarar Temple",
+        "District": "Chennai",
+        "Locality": "Mint",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2894, 13.1107]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Karaneeswarar Temple",
+        "District": "Chennai",
+        "Locality": "Saidapet",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2218, 13.0212]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Ananth Padmanabha Swamy Temple",
+        "District": "Chennai",
+        "Locality": "Adyar",
+        "Deity": "Vishnu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2574, 13.0035]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Lakshmi Narasimhar Temple",
+        "District": "Chennai",
+        "Locality": "Velachery",
+        "Deity": "Vishnu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2205, 12.9815]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Rathnagiriswarar Temple",
+        "District": "Chennai",
+        "Locality": "Thiruvanmiyur",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2588, 12.9836]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Mallikeswarar Temple",
+        "District": "Chennai",
+        "Locality": "George Town",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2833, 13.0947]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Temple_Name": "Kasi Viswanathar Temple",
+        "District": "Chennai",
+        "Locality": "West Mambalam",
+        "Deity": "Shiva"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.2209, 13.0355]
+      }
+    }
+  ]
+}
