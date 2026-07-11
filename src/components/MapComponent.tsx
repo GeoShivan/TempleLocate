@@ -10,7 +10,7 @@ import LineString from 'ol/geom/LineString';
 import { fromLonLat, toLonLat } from 'ol/proj';
 import OSM from 'ol/source/OSM';
 import XYZ from 'ol/source/XYZ';
-import { Style, Circle as CircleStyle, Fill, Stroke, Text, RegularShape } from 'ol/style';
+import { Style, Icon, Fill, Stroke, Text, RegularShape } from 'ol/style';
 import Overlay from 'ol/Overlay';
 import { FullScreen, ScaleLine, Zoom, Control } from 'ol/control';
 import { easeOut } from 'ol/easing';
@@ -66,10 +66,11 @@ export default function MapComponent({ temples, baseMap, setBaseMap, selectedTem
       const templeFeature = feature.get('templeData') as TempleFeature;
       const color = getDeityColor(templeFeature.properties.Deity);
       return new Style({
-        image: new CircleStyle({
-          radius: 8,
-          fill: new Fill({ color }),
-          stroke: new Stroke({ color: '#fff', width: 2 })
+        image: new Icon({
+          src: `${import.meta.env.BASE_URL}temple.svg`,
+          scale: 0.5,
+          color: color,
+          anchor: [0.5, 1]
         })
       });
     };

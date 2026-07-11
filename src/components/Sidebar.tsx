@@ -73,8 +73,8 @@ export default function Sidebar({
       >
         <div className="p-6 border-b border-slate-200 bg-white flex justify-between items-center shrink-0 w-80">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-200 shrink-0">
-              <span className="text-white text-xl">🛕</span>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg shrink-0 overflow-hidden bg-slate-100">
+              <img src={`${import.meta.env.BASE_URL}logo.jpg`} alt="Temple Locator Logo" className="w-full h-full object-cover" />
             </div>
             <div>
               <h1 className="text-lg font-bold text-slate-800 leading-tight">Temple Locator</h1>
